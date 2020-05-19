@@ -1,13 +1,12 @@
 <div class="container p-2 mt-3">
   <div class="row">
-    <app-cockpit></app-cockpit>
+    <app-cockpit (serverCreated)="onServerAdded($event)"></app-cockpit>
   </div>
 </div>
 <div class="container p-2 mt-3">
 
 <div class="row">
-  <ul class="list-group">
-    <li  class="list-group-item" *ngFor="let server of servers; let i = index;"  (click)="removeServer(i)">{{ server.name + " " + i}} </li>
-  </ul>
+<app-server-element *ngFor="let server of servers;"
+[serverElement]="server"></app-server-element>
 </div>
 </div>

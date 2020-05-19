@@ -1,6 +1,6 @@
 <div class="form-group">
   <h4>Bootstrap</h4>
-  <input type="text" #serverName [(ngModel)]="newServer"  class="form-control">
+  <input type="text" #newServer   class="form-control">
   <hr>
-  <button [disabled]="newServer===''" class="btn btn-primary" (click)="addServer(serverName)">Add Server</button>
+  <button  class="btn btn-primary" (click)="addServer(newServer)">Add Server</button>
 </div>

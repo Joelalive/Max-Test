@@ -13,19 +13,11 @@ export class AppComponent {
     new Server('Dummy Server')
   ];
 
-  newServer = 'Server Name';
-
-  addServer(serverName) {
+  onServerAdded(serverData: { serverName: string} ) {
     console.log('Server Added');
     this.servers.push({
-      name: serverName.value
+      name: serverData.serverName
     });
-    this.newServer = serverName.value;
   }
-
-  removeServer(index) {
-    this.servers.splice(index, 1);
-  }
-
 
 }
